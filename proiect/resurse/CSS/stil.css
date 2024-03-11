@@ -1,0 +1,17 @@
+body {
+
+    --culoare1: #F05AF0;
+    --dim: 100px;
+    padding-left: var(--dim);
+    padding-right: var(-dim);
+}
+
+p {
+    color: var(--culoare1);
+
+
+}
+
+h2 {
+    border: 2px solid var(--culoare1)
+}
