@@ -9,7 +9,7 @@ body {
     --portocal: rgb(246 167 8);
     --spatiere: 100px;
     padding-left: var(--spatiere);
-    padding-right: var(-spatiere);
+    padding-right: var(--spatiere);
 }
 
 
@@ -67,14 +67,15 @@ body {
 }
 
 #tab-orar tr:hover {
-    background-color: var(--verde-lime);
-    font-size: 120%;
+    background-color: var(--gri);
+    font-size: 110%;
     transition: all 0.75s linear;
 }
 
 #tab-orar th,
 #tab-orar td {
     border: 3px solid var(--culoare-text);
+    padding: 3px;
 }
 
 #tab-orar {
@@ -165,31 +166,33 @@ body {
     text-decoration: none;
     border-bottom-left-radius: 30%;
     border-bottom-right-radius: 30%;
+    font-size: 50%;
+
     transition: all 600ms linear;
 }
 
 #iframe1:hover {
     background-color: var(--verde-inchis);
     color: var(--verde-lime);
+    box-shadow: 0px 0px 3px 3px var(--verde-lime);
     transition: all 600ms linear;
 }
 
 #iframe2:hover {
     background-color: var(--verde-inchis);
     color: var(--verde-lime);
+    box-shadow: 0px 0px 3px 3px var(--verde-lime);
     transition: all 600ms linear;
 }
 
 #iframe3:hover {
     background-color: var(--verde-inchis);
     color: var(--verde-lime);
+    box-shadow: 0px 0px 3px 3px var(--verde-lime);
     transition: all 600ms linear;
 }
 
-#linkuri {
 
-    text-decoration: none;
-}
 
 #Titlu {
     font-size: 200%;
@@ -202,4 +205,13 @@ body {
 
 .taburi-iframe>a:last-child {
     margin-bottom: 0;
+}
+
+
+footer {
+    margin-top: 10px;
+    border-width: 3px var(--gri);
+    border-radius: 2%;
+    box-shadow: 0px 0px 2px 2px var(--portocaliu);
+
 }

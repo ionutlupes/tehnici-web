@@ -1,6 +1,7 @@
 html {
     font-size: 18px;
-
+    font-family: "Kameron", sans-serif;
+    font-style: normal;
 
 }
 
@@ -21,6 +22,7 @@ html {
 #grid-pagina>* {
     border: 2px solid blueviolet;
     margin: 0;
+    padding: 2px;
 
 }
 
@@ -29,47 +31,47 @@ html {
 }
 
 #prezentare {
-    padding: 5px;
+
     grid-area: prezentare;
 }
 
 #utilizatori {
-    padding: 5px;
+
     grid-area: utilizatori;
 }
 
 #evenimente {
-    padding: 5px;
+
     grid-area: evenimente;
 }
 
 #anunturi {
-    padding: 5px;
+
     grid-area: anunturi;
 }
 
 #utilizator_statistica {
-    padding: 5px;
+
     grid-area: utilizator_statistica;
 }
 
 #date_site {
-    padding: 5px;
+
     grid-area: date_site;
 }
 
 #welcome {
-    padding: 5px;
+
     grid-area: welcome;
 }
 
 #Promotii {
-    padding: 5px;
+
     grid-area: Promotii;
 }
 
 #orar {
-    padding: 5px;
+
     grid-area: orar;
 }
 
@@ -89,10 +91,10 @@ html {
         grid-template-columns: repeat(2, 1fr);
         gap: 5px;
         grid-template-areas: "welcome  welcome"
-            "utilizatori utilizator_statistica"
+            "prezentare utilizator_statistica"
             "date_site evenimente"
             "anunturi orar"
-            "prezentare Promotii"
+            "utilizator Promotii"
             "index-intrebari index-intrebari ";
     }
 }
@@ -106,6 +108,6 @@ html {
 
     #grid-pagina {
         display: block;
-        gap: 10px;
+        gap: 2px;
     }
 }
