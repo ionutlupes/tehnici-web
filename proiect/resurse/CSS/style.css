@@ -215,3 +215,31 @@ footer {
     box-shadow: 0px 0px 2px 2px var(--portocaliu);
 
 }
+
+
+
+#fig1 {
+    width: 350px;
+
+}
+
+
+
+@media screen and (max-width: 1200px) {
+
+
+    #fig2 {
+        width: 300px;
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+
+    #fig1 {
+        width: 90%;
+    }
+
+
+
+}

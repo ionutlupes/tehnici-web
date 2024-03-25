@@ -1,6 +1,8 @@
 html {
     font-size: 18px;
-    font-family: "Kameron", sans-serif;
+    font-family: "Afacad", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
     font-style: normal;
 
 }
@@ -84,22 +86,22 @@ html {
 
 @media screen and (max-width:1200px) {
     html {
-        font-size: 15px;
+        font-size: 13px;
     }
 
     #grid-pagina {
         grid-template-columns: repeat(2, 1fr);
         gap: 5px;
         grid-template-areas: "welcome  welcome"
-            "prezentare utilizator_statistica"
+            "utilizator_statistica utilizator"
             "date_site evenimente"
             "anunturi orar"
-            "utilizator Promotii"
+            "utilizator Promotii prezentare"
             "index-intrebari index-intrebari ";
     }
 }
 
-@media screen and (max-width:800px) {
+@media screen and (max-width:700px) {
 
     html {
         font-size: 12px;
