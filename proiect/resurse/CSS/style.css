@@ -14,6 +14,8 @@ body {
     padding-right: var(--spatiere);
 }
 
+
+
 @media screen and (max-width:1200px) {
     body {
         padding-left: var(--spatiere1);
@@ -247,15 +249,15 @@ footer {
 
 
     #fig1 {
-        width: 90%;
+        width: 300px;
     }
 
     #loc {
-        width: 90%;
+        width: 300px;
     }
 
     #ifr-video {
-        width: 90%;
+        width: 300px;
     }
 
 }

@@ -14,51 +14,6 @@
     figcaption {
         display: none;
     }
-}
-
-a {
-    color: var(--culoare-text);
-    text-decoration: none;
-}
-
-body {
-    display: block !important;
-}
-
-#end {
-    position: fixed;
-    bottom: 0;
-    width: 70%;
-    margin: 0 auto;
-    border: 4px inset black;
-    text-align: center;
-    page-break-before: always;
-}
-
-
-#grid-pagina {
-    display: block;
-    row-gap: 15px;
-    column-gap: 5px;
-    padding: 10px;
-}
-
-nav ul ul {
-    display: none !important;
-}
-
-
-@media print {
-
-    #absolut {
-        position: absolute;
-        display: inline-block;
-        top: 100%;
-        width: 20px;
-        height: 20px;
-        right: 0;
-        overflow: visible;
-    }
 
     #watermark {
         display: block;
@@ -83,7 +38,7 @@ nav ul ul {
         opacity: 0.4;
         text-align: center;
         font-weight: bold;
-        content: "Lupes Ioan-Marian";
+        content: "Lupes \A Ioan-Marian";
     }
 
     h1 {
@@ -111,8 +66,39 @@ nav ul ul {
         page-break-before: always;
     }
 
+    #end::after {
+        position: fixed;
+        bottom: 0;
+        width: 70%;
+        margin: 0 auto;
+        border: 4px inset black;
+        text-align: center;
+        page-break-before: always;
+        height: 1cm;
+        opacity: 0.4;
+        font-weight: bold;
+        content: "Acesta este un proiect școlar!";
+    }
 
 }
+
+a {
+    color: var(--culoare-text);
+    text-decoration: none;
+}
+
+
+body {
+    display: block;
+    row-gap: 15px;
+    column-gap: 5px;
+    padding: 10px;
+}
+
+nav ul ul {
+    display: none;
+}
+
 
 @page {
     size: A4 portrait;
