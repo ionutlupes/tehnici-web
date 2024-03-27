@@ -23,10 +23,7 @@ nav {
     display: none;
     opacity: 0;
     transform: scaleY(0);
-
-
     /* animation: animatie_submeniu 600ms linear 1 forwards; */
-
 }
 
 
@@ -83,9 +80,9 @@ nav {
 .meniu li:hover>a {
 
     background-color: var(--verde-inchis);
-    text-decoration: underline;
+
     color: var(--verde-lime);
-    text-shadow: 0 -1em 2px rgb(236, 230, 230);
+
     transition: all 600ms linear;
 
 }
@@ -102,16 +99,20 @@ nav {
 
 }
 
-/* .meniu .link:hover {
+.meniu .link {
+    text-shadow: 0 -2em 1px rgb(236, 230, 230);
+}
 
-    text-shadow: none;
+.meniu .link:hover {
+
+    text-shadow: 0 0 1px rgb(236, 230, 230);
     text-decoration: none;
 }
 
 .meniu .sublink:hover {
-    text-decoration: none;
+    text-decoration: underline;
 }
- */
+
 
 #acasa-mediu {
     display: none;

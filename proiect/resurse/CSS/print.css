@@ -1,0 +1,133 @@
+#watermark,
+#absolut {
+    display: none;
+}
+
+@media print {
+
+
+    #link-top,
+    #ifr-video,
+    #fig1,
+    #loc,
+    .taburi-iframe,
+    figcaption {
+        display: none;
+    }
+}
+
+a {
+    color: var(--culoare-text);
+    text-decoration: none;
+}
+
+body {
+    display: block !important;
+}
+
+#end {
+    position: fixed;
+    bottom: 0;
+    width: 70%;
+    margin: 0 auto;
+    border: 4px inset black;
+    text-align: center;
+    page-break-before: always;
+}
+
+
+#grid-pagina {
+    display: block;
+    row-gap: 15px;
+    column-gap: 5px;
+    padding: 10px;
+}
+
+nav ul ul {
+    display: none !important;
+}
+
+
+@media print {
+
+    #absolut {
+        position: absolute;
+        display: inline-block;
+        top: 100%;
+        width: 20px;
+        height: 20px;
+        right: 0;
+        overflow: visible;
+    }
+
+    #watermark {
+        display: block;
+        position: fixed;
+        /*apare pe toate paginile*/
+        bottom: 0;
+        color: rgba(0, 0, 0, 0.4);
+        right: 0;
+    }
+
+    #watermark::after {
+
+        opacity: 0.4;
+        padding: 5px;
+        display: block;
+        bottom: 0;
+        right: 0;
+        border-radius: 5px;
+        width: 4cm;
+        height: 1cm;
+        border: 3px solid black;
+        opacity: 0.4;
+        text-align: center;
+        font-weight: bold;
+        content: "Lupes Ioan-Marian";
+    }
+
+    h1 {
+        page-break-after: always;
+        margin-top: 50%;
+        text-align: center;
+        margin-left: 1cm;
+    }
+
+    #grid-pagina {
+        font-size: 10px;
+        box-sizing: border-box;
+        page-break-before: always;
+        background-color: white;
+        display: block;
+    }
+
+
+    nav {
+        page-break-after: always;
+    }
+
+    /* Page break înainte de footer */
+    footer {
+        page-break-before: always;
+    }
+
+
+}
+
+@page {
+    size: A4 portrait;
+    margin-bottom: 2cm;
+    margin-top: 2cm;
+    counter-increment: page;
+
+}
+
+@page {
+    margin-left: 3cm;
+    margin-right: 1cm;
+}
+
+@page :right {
+    margin-left: 1cm;
+    margin-right: 3cm;
+}

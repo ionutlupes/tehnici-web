@@ -22,10 +22,10 @@ html {
 }
 
 #grid-pagina>* {
-    border: 2px solid blueviolet;
-    margin: 0;
-    padding: 2px;
-
+    border: 2px solid var(--culoare-text);
+    padding: 5px;
+    background: linear-gradient(0deg, var(--portocal) 0%, var(--verde-lime) 100%);
+    border-radius: 7%;
 }
 
 #grid-pagina>figure {
@@ -87,17 +87,20 @@ html {
 @media screen and (max-width:1200px) {
     html {
         font-size: 13px;
+        padding: 0px;
     }
 
     #grid-pagina {
         grid-template-columns: repeat(2, 1fr);
         gap: 5px;
+
         grid-template-areas: "welcome  welcome"
-            "utilizator_statistica utilizator"
+            "utilizator_statistica utilizatori"
             "date_site evenimente"
             "anunturi orar"
-            "utilizator Promotii prezentare"
-            "index-intrebari index-intrebari ";
+            "prezentare  prezentare"
+            "Promotii Promotii"
+            "intrebari_frecvente intrebari_frecvente ";
     }
 }
 
@@ -105,6 +108,7 @@ html {
 
     html {
         font-size: 12px;
+
     }
 
 

@@ -7,10 +7,31 @@ body {
     --verde-inchis: #146635;
     --gri: rgb(192 192 192);
     --portocal: rgb(246 167 8);
-    --spatiere: 100px;
+    --spatiere: 50px;
+    --spatiere1: 25px;
+    --spatiere2: 0px;
     padding-left: var(--spatiere);
     padding-right: var(--spatiere);
 }
+
+@media screen and (max-width:1200px) {
+    body {
+        padding-left: var(--spatiere1);
+        padding-right: var(--spatiere1);
+    }
+
+
+}
+
+@media screen and (max-width:700px) {
+    body {
+        padding-left: var(--spatiere2);
+        padding-right: var(--spatiere2);
+    }
+
+
+}
+
 
 
 
@@ -81,6 +102,7 @@ body {
 #tab-orar {
     border-spacing: 0px;
     border-collapse: collapse;
+    /* width: 300px; */
 }
 
 #tab-orar th:nth-child(2n+1) {
@@ -109,6 +131,7 @@ body {
 #ifr-video {
     border: 5px solid var(--verde-lime);
     height: auto;
+    width: 350px;
 
 }
 
@@ -120,8 +143,8 @@ body {
 .taburi-iframe {
     display: flex;
     flex-direction: row;
-    width: 25%;
-    justify-content: space-between;
+    width: 30%;
+    justify-content: space-around;
 
 
 
@@ -167,30 +190,19 @@ body {
     border-bottom-left-radius: 30%;
     border-bottom-right-radius: 30%;
     font-size: 50%;
-
     transition: all 600ms linear;
 }
 
-#iframe1:hover {
-    background-color: var(--verde-inchis);
-    color: var(--verde-lime);
-    box-shadow: 0px 0px 3px 3px var(--verde-lime);
-    transition: all 600ms linear;
-}
-
-#iframe2:hover {
-    background-color: var(--verde-inchis);
-    color: var(--verde-lime);
-    box-shadow: 0px 0px 3px 3px var(--verde-lime);
-    transition: all 600ms linear;
-}
-
+#iframe1:hover,
+#iframe2:hover,
 #iframe3:hover {
     background-color: var(--verde-inchis);
     color: var(--verde-lime);
     box-shadow: 0px 0px 3px 3px var(--verde-lime);
     transition: all 600ms linear;
 }
+
+
 
 
 
@@ -212,8 +224,9 @@ footer {
     margin-top: 10px;
     border-width: 3px var(--gri);
     border-radius: 2%;
-    box-shadow: 0px 0px 2px 2px var(--portocaliu);
-
+    box-shadow: 0px 0px 20px 2px var(--portocaliu);
+    /* background: linear-gradient(0deg, var(--portocal) 0%, var(--verde-lime) 100%); */
+    background-color: var(--verde-lime);
 }
 
 
@@ -223,13 +236,26 @@ footer {
 
 }
 
+#loc {
+    width: 350px;
+
+}
+
 
 
 @media screen and (max-width: 1200px) {
 
 
-    #fig2 {
-        width: 300px;
+    #fig1 {
+        width: 90%;
+    }
+
+    #loc {
+        width: 90%;
+    }
+
+    #ifr-video {
+        width: 90%;
     }
 
 }
@@ -237,7 +263,16 @@ footer {
 @media screen and (max-width: 700px) {
 
     #fig1 {
-        width: 90%;
+        width: 70%;
+    }
+
+    #ifr-video {
+        width: 70%;
+    }
+
+    #loc {
+        width: 70%;
+
     }
 
 
