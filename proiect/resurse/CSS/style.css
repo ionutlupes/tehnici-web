@@ -132,7 +132,7 @@ body {
 
 #ifr-video {
     border: 5px solid var(--verde-lime);
-    height: auto;
+    height: 150px;
     width: 350px;
 
 }
@@ -145,10 +145,8 @@ body {
 .taburi-iframe {
     display: flex;
     flex-direction: row;
-    width: 30%;
-    justify-content: space-around;
-
-
+    width: 25%;
+    justify-content: space-between;
 
 }
 
@@ -260,6 +258,7 @@ footer {
         width: 300px;
     }
 
+
 }
 
 @media screen and (max-width: 700px) {
@@ -276,6 +275,7 @@ footer {
         width: 70%;
 
     }
+
 
 
 
