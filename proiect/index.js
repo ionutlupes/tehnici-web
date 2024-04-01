@@ -47,7 +47,9 @@ app.get(["/", "/index", "/home"], function (req, res) {
 })
 
 app.get("/*", function (req, res) {
+    // res.send(req.url);
     console.log(req.url);
+    res.render("pagini/eroare");
     res.render("pagini" + req.url, function (err, rezHtml) {
         console.log("Pagina: ", rezHtml);
         console.log("Eroare: ", err);

@@ -1,4 +1,6 @@
 /*facem vizibil iconul de hamburger meniu*/
+$delay: 0.3s;
+
 body {
 
     --portocaliu: #E07846;
@@ -8,7 +10,7 @@ body {
     --verde-inchis: #146635;
     --gri: rgb(192 192 192);
     --portocal: rgb(246 167 8);
-    --spatiere: 100px;
+
 
 }
 
@@ -34,59 +36,32 @@ body {
     display: block;
 } */
 
-#Dreptunghi1 {
-    height: 20%;
-    width: 50%;
-    background-color: white;
-    border-radius: 30%;
-    transform: rotate(180deg);
-    transition: all 600ms linear;
-}
-
+#Dreptunghi1,
+#Dreptunghi3,
 #Dreptunghi2 {
     height: 20%;
     width: 50%;
-    background-color: white;
     border-radius: 30%;
-    transform: rotate(180deg);
-    transition: all 600ms linear;
+    animation: culoare 0.7s linear 1 forwards, culoare_dupa 3s linear infinite forwards;
+
+
+
 }
 
-#Dreptunghi3 {
-    height: 20%;
-    width: 50%;
-    background-color: white;
-    border-radius: 30%;
-    transform: rotate(180deg);
-    transition: all 600ms linear;
+
+@for $i from 1 through 3 {
+    #hamburger:hover>#Dreptunghi#{$i} {
+        background-color: var(--portocaliu);
+        animation-name: rotire_hamburger;
+        animation-duration: 0.7s;
+        animation-iteration-count: infinite;
+        animation-fill-mode: forwards;
+        animation-timing-function: linear;
+        animation-delay: ($i - 1) * $delay;
+    }
 }
 
-#hamburger:hover>#Dreptunghi1 {
-    background-color: var(--portocaliu);
-    animation-name: rotire_hamburger;
-    animation-iteration-count: infinite;
-    animation-duration: 0.9s;
-    animation-fill-mode: forwards;
-    animation-timing-function: linear;
-}
 
-#hamburger:hover>#Dreptunghi2 {
-    background-color: var(--portocaliu);
-    animation-name: rotire_hamburger;
-    animation-iteration-count: infinite;
-    animation-duration: 0.7s;
-    animation-fill-mode: forwards;
-    animation-timing-function: linear;
-}
-
-#hamburger:hover>#Dreptunghi3 {
-    background-color: var(--portocaliu);
-    animation-name: rotire_hamburger;
-    animation-iteration-count: infinite;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-    animation-timing-function: linear;
-}
 
 
 /* implicit meniul e ascuns*/
@@ -153,23 +128,67 @@ nav ul.meniu>li:hover>ul {
 
 
 /* pentru fiecare element din submeniu generam un triunghiulet alb inaintea lui*/
-nav ul.meniu>li li a:before {
+/* nav ul.meniu>li li a:before {
     content: " \25B7\00A0	";
     color: white;
 
-}
-
+} */
 @keyframes rotire_hamburger {
     100% {
         transform: rotate(360deg);
     }
+
 }
+
+@keyframes culoare {
+    0% {
+        opacity: 0%;
+        transform: scaleX(0);
+        background-color: var(--portocaliu);
+    }
+
+    100% {
+        opacity: 100%;
+        transform: scaleX(1);
+        background-color: var(--portocaliu);
+    }
+}
+
+@keyframes culoare_dupa {
+    0% {
+        background-color: var(--portocaliu);
+        transition: all 100ms linear;
+    }
+
+    33% {
+        background-color: var(--verde-lime);
+        transition: all 100ms linear;
+
+    }
+
+    66% {
+        background-color: var(--bleu);
+        transition: all 100ms linear;
+
+    }
+
+
+    100% {
+        background-color: var(--portocaliu);
+        transition: all 100ms linear;
+    }
+
+
+
+
+}
+
+
 
 @keyframes aparitie_hamburger {
     0% {
         opacity: 0%;
         transform: scaleX(0);
-
     }
 
     50% {
@@ -183,12 +202,9 @@ nav ul.meniu>li li a:before {
     }
 }
 
-
-
 @keyframes aparitie_meniu_p {
     0% {
         opacity: 0;
-
     }
 
     100% {
@@ -210,6 +226,5 @@ nav ul.meniu>li li a:before {
     100% {
         opacity: 1;
         transform: scaleX(1);
-
     }
 }

@@ -7,6 +7,7 @@
 nav {
     --inaltime-meniu: 2.5em;
     --latime-buton: 150px;
+
     height: var(--inaltime-meniu);
     background-color: var(--verde-lime);
     --portocaliu: #E07846;

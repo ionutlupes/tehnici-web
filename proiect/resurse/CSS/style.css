@@ -280,3 +280,26 @@ footer {
 
 
 }
+
+a[href^="http"]::before {
+    content: "\2BB3";
+    width: 1.5em;
+    height: 1.5em;
+    color: var(--culoare-text);
+}
+
+.linkuri {
+    color: var(--portocaliu);
+    background-image: radial-gradient(circle, var(--verde-lime) 10%, var(--portocaliu) 40%, transparent 80%, transparent 10%);
+    background-position: center;
+    transition: background-size 6s;
+}
+
+.linkuri:active {
+    border: 2px solid var(--culoare-text);
+}
+
+
+a:hover {
+    background-size: 100%;
+}
