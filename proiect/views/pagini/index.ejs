@@ -20,16 +20,15 @@
                     <script id="MathJax-script"
                         src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
-                    <video id="videoVTT" width="320" height="240" controls>
+                    <video id="videoVTT" width="320" height="240" controls autoplay muted loop>
                         <source src="./resurse/video/clip.mp4" type="video/mp4">
                         <source src="./resurse/video/clip.ogv" type="video/mp4">
+                        <track default src="./resurse/sub/ro.vtt" kind="captions" srclang="ro" label="romana">
+                        <track src="./resurse/sub/en.vtt" kind="captions" srclang="en" label="engleza">
+
                         <p>
                             Browserul nu suporta varianta video, uite un link catre
                             <a href="./resurse/video/clip.mp4">video.</a>
-                            <track default
-                                src="./resurse/sub/subtitrari-ro.vtt;base64,V0VCVlRUDQoNCjAwOjAwLjAwMCAtLT4gMDA6MDMuMDAwDQpVbiA8Yj5CaW5lIGF0aSB2ZW5pdCBsYSBtYWdhemludWwganVjYXJpaSBwZW50cnUgY29waWkhPC9iPi4NCg0KMDA6MDMuMDAwIC0tPiAwMDowNy4wMDANCk1hIGJ1Y3VyIGNhIGF0aSBpbnRyYXQgcGUgYWNlc3Qgc2l0ZSE8aT52dHQ8L2k+LiANCg0K"
-                                kind="captions" srclang="ro" label="romana" />
-                            <!-- <track src="mesaje_en.vtt" kind="captions" srclang="en" label="engleza" /> -->
 
                         </p>
                     </video>

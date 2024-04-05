@@ -230,9 +230,9 @@ footer {
 }
 
 ::cue {
-    background: var(--culoare-text);
+    background: var(--portocaliu);
     font-style: italic;
-    color: #ffbbbb;
+    color: var(--culoare-text);
 }
 
 
@@ -312,11 +312,20 @@ a[href^="http"]::before {
     transition: background-size 6s;
 }
 
-.linkuri:active {
+a:active {
     border: 4px solid var(--culoare-text);
 }
 
+a {
+    background: radial-gradient(transparent, 40%, transparent 80%);
+    background-position: center !important;
+    background-size: 0%;
+    background-repeat: no-repeat !important;
+    transition: all 1s linear;
+}
 
 a:hover {
+    background: radial-gradient(var(--bleu)40%, transparent 80%);
     background-size: 100%;
+    transition: all 1s linear;
 }
