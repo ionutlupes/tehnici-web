@@ -1,0 +1,29 @@
+html {
+    font-size: 18px;
+    font-family: "Afacad", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+body {
+
+    --portocaliu: #E07846;
+    --bleu: #6CC7E0;
+    --culoare-text: #665D59;
+    --verde-lime: #77E0AE;
+    --verde-inchis: #146635;
+    --gri: rgb(192 192 192);
+    --portocal: rgb(246 167 8);
+    --spatiere: 50px;
+    --spatiere1: 25px;
+    --spatiere2: 0px;
+    padding-left: var(--spatiere);
+    padding-right: var(--spatiere);
+}
+
+#grid-pagina-about {
+    gap: 10px;
+    display: block;
+}

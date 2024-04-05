@@ -229,6 +229,11 @@ footer {
     background-color: var(--verde-lime);
 }
 
+::cue {
+    background: var(--culoare-text);
+    font-style: italic;
+    color: #ffbbbb;
+}
 
 
 #fig1 {
@@ -239,6 +244,10 @@ footer {
 #loc {
     width: 350px;
 
+}
+
+#videoVTT {
+    width: 300px;
 }
 
 
@@ -256,6 +265,10 @@ footer {
 
     #ifr-video {
         width: 300px;
+    }
+
+    #videoVTT {
+        width: 80%px;
     }
 
 
@@ -276,6 +289,10 @@ footer {
 
     }
 
+    #videoVTT {
+        width: 70%;
+    }
+
 
 
 
@@ -285,7 +302,7 @@ a[href^="http"]::before {
     content: "\2BB3";
     width: 1.5em;
     height: 1.5em;
-    color: var(--culoare-text);
+    color: black;
 }
 
 .linkuri {
@@ -296,7 +313,7 @@ a[href^="http"]::before {
 }
 
 .linkuri:active {
-    border: 2px solid var(--culoare-text);
+    border: 4px solid var(--culoare-text);
 }
 
 
