@@ -1,0 +1,292 @@
+html {
+    font-size: 18px;
+    font-family: "Afacad", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+#grid-pagina {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+
+    grid-template-areas: "welcome welcome welcome"
+        "utilizatori utilizator_statistica date_site"
+        "evenimente evenimente orar"
+        "anunturi anunturi orar"
+        "prezentare Promotii Promotii"
+        "intrebari_frecvente intrebari_frecvente intrebari_frecvente";
+
+}
+
+#grid-pagina>* {
+    border: 2px solid var(--culoare-text);
+    padding: 5px;
+    background: linear-gradient(0deg, var(--portocal) 0%, var(--verde-lime) 100%);
+    border-radius: 7%;
+}
+
+#grid-pagina>figure {
+    margin: 0;
+}
+
+#prezentare {
+
+    grid-area: prezentare;
+}
+
+#utilizatori {
+
+    grid-area: utilizatori;
+}
+
+#evenimente {
+
+    grid-area: evenimente;
+}
+
+#anunturi {
+
+    grid-area: anunturi;
+}
+
+#utilizator_statistica {
+
+    grid-area: utilizator_statistica;
+}
+
+#date_site {
+
+    grid-area: date_site;
+}
+
+#welcome {
+
+    grid-area: welcome;
+}
+
+#Promotii {
+
+    grid-area: Promotii;
+}
+
+#orar {
+
+    grid-area: orar;
+}
+
+#intrebari_frecvente {
+    padding: 5px;
+    grid-area: intrebari_frecvente;
+}
+
+
+#grid-galerie {
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid: row gap 0.5em;
+    grid-column-gap: 0.5em;
+    counter-reset: nrimag 3;
+}
+
+#grid-galerie img {
+    width: 100%;
+}
+
+#grid-galerie figcaption {
+    text-align: center;
+    counter-increment: nrimag 2;
+}
+
+#grid-galerie figcaption::before {
+    content: counter(nrimag, lower-alpha) ")";
+}
+
+
+#grid-galerie>figure:nth-child(1) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+#grid-galerie>figure:nth-child(2) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+#grid-galerie>figure:nth-child(3) {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+}
+
+#grid-galerie>figure:nth-child(4) {
+    grid-column: 4 / 5;
+    grid-row: 1 / 2;
+}
+
+#grid-galerie>figure:nth-child(5) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+#grid-galerie>figure:nth-child(6) {
+    grid-column: 4 / 5;
+    grid-row: 2 / 3;
+}
+
+#grid-galerie>figure:nth-child(7) {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+}
+
+#grid-galerie>figure:nth-child(8) {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+}
+
+#grid-galerie>figure:nth-child(9) {
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+}
+
+#grid-galerie>figure:nth-child(10) {
+    grid-column: 4 / 5;
+    grid-row: 3 / 4;
+}
+
+
+@media screen and (max-width:1200px) {
+    html {
+        font-size: 13px;
+        padding: 0px;
+    }
+
+    #grid-pagina {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px;
+
+        grid-template-areas: "welcome  welcome"
+            "utilizator_statistica utilizatori"
+            "date_site evenimente"
+            "anunturi orar"
+            "prezentare  prezentare"
+            "Promotii Promotii"
+            "intrebari_frecvente intrebari_frecvente ";
+    }
+
+    #grid-galerie {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid: row gap 0.5em;
+        grid-column-gap: 0.5em;
+        counter-reset: nrimag 3;
+        transform: translateY(-10%);
+        transition: all 1.25s linear;
+    }
+
+    #grid-galerie img {
+        width: 100%;
+    }
+
+    #grid-galerie figcaption {
+        text-align: center;
+        counter-increment: nrimag 2;
+
+
+    }
+
+    #grid-galerie figcaption:hover {
+        background: var(--gri);
+        transition: all 1200ms linear;
+    }
+
+
+    #grid-galerie figcaption::before {
+        content: counter(nrimag, lower-alpha) ")";
+    }
+
+
+    #grid-galerie>figure:nth-child(1) {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+
+    #grid-galerie>figure:nth-child(2) {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+    }
+
+    #grid-galerie>figure:nth-child(3) {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+
+    #grid-galerie>figure:nth-child(4) {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+    }
+
+    #grid-galerie>figure:nth-child(5) {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+    }
+
+    #grid-galerie>figure:nth-child(6) {
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
+    }
+
+    #grid-galerie>figure:nth-child(7) {
+        grid-column: 1 / 2;
+        grid-row: 4 / 5;
+    }
+
+    #grid-galerie>figure:nth-child(8) {
+        grid-column: 2 / 3;
+        grid-row: 4 / 5;
+    }
+
+    #grid-galerie>figure:nth-child(9) {
+        grid-column: 1 / 2;
+        grid-row: 5 / 6;
+    }
+
+    #grid-galerie>figure:nth-child(10) {
+        grid-column: 2 / 3;
+        grid-row: 5 / 6;
+    }
+
+    #grid-galerie:hover {
+        transform: translateY(-10%);
+        transition: all 1s linear;
+    }
+
+    #grid-galerie>figure:hover {
+        transform: translateY(-10%);
+        transition: all 1s linear;
+    }
+
+}
+
+@media screen and (max-width:700px) {
+
+    html {
+        font-size: 12px;
+
+    }
+
+
+    #grid-pagina {
+        display: block;
+        gap: 2px;
+    }
+
+    #grid-galerie {
+        display: block;
+        gap: 2px;
+    }
+}
