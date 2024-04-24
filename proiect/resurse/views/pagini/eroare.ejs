@@ -1,20 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
+    <meta name="description"
+        content="Cofetaria Dulcelind ofera prajituri, torturi, produse de patiserie cu optiunea de achizitie online si livrare prin curier.">
+    <meta name="keywords" content="cofetarie, Dulcelind, prajituri, torturi, dulce, pateuri, produse">
+    <title>Magazin de jucarii - eroare</title>
+    <link rel="stylesheet" type="text/css" href="./resurse/CSS/eroare.css">
+    <%- include("../fragmente/head.ejs"); %>
 
-    </title>
+
 </head>
 
 <body>
-    <h1>
-        <h1>Eroare 404</h1>
-    </h1>
 
-    <img src="./resurse/imagini/eroare.jpg" width="560" height="315" alt="Eroare 404" title="eroare 404">
+    <%- include("../fragmente/header.ejs"); %>
+
+        <main>
+            <div id="err-coloane">
+                <div id="err-imag">
+                    <img src="<%- locals.imagine %>" />
+                </div>
+                <section>
+                    <h2><%- locals.titlu %></h2>
+                    <p><%- locals.text %></p>
+                </section>
+            </div>
+        </main>
+
+        <%- include("../fragmente/footer.ejs"); %>
+
+
 </body>
 
-</html
+</html>

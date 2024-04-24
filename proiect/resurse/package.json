@@ -1,0 +1,19 @@
+{
+  "name": "proiect",
+  "version": "1.0.0",
+  "description": "Magazin de jucarii",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lupes Ioan-Marian",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "ejs": "^3.1.9",
+    "express": "^4.19.1",
+    "pg": "^8.11.5",
+    "sass": "^1.75.0",
+    "sharp": "^0.33.3"
+  }
+}

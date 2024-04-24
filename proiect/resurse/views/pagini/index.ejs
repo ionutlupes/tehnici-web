@@ -15,19 +15,73 @@
             <div id="grid-pagina">
                 <section id="welcome">
                     <h2> Bine ați venit!</h2>
+
+                    <video id="videoVTT" width="320" height="240" controls autoplay muted loop>
+                        <source src="./resurse/video/clip.mp4" type="video/mp4">
+                        <source src="./resurse/video/clip.ogv" type="video/mp4">
+                        <track default src="./resurse/sub/ro.vtt" kind="captions" srclang="ro" label="romana">
+                        <track src="./resurse/sub/en.vtt" kind="captions" srclang="en" label="engleza">
+
+                        <p>
+                            Browserul nu suporta varianta video, uite un link catre
+                            <a href="./resurse/video/clip.mp4">video.</a>
+
+                        </p>
+                    </video>
+
+                    <picture>
+                        <div id="container-duotone">
+                            <img src="resurse/imagini/piese.jpg" width="300" height="200">
+                        </div>
+
+                    </picture>
+                    <p>IP: <%-locals.ip %></p>
+                    <button type="button" class="btn btn-primary btn-lg">Stil-1-mare</button>
                     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
                     <script id="MathJax-script"
                         src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+                    <section id="galerie-statica">
+                        <div id="grid-galerie">
+                            <% var
+                                vLuni=["ianuare","februarie","martie","aprilie","mai","iunie","iulie","august","septembrie","octombrie","noiembrie","decembrie"];
+                                var d=new Date(); var luna_cur=vLuni[d.getMonth()]; for (let imag of locals.imagini){
+                                if( imag?.luni?.includes(luna_cur)){ %>
 
+                                <figure>
+                                    <picture>
+
+
+
+                                        <source id="fig3" srcset="<%=imag.fisier_mediu %> " // //
+                                            media="(max-width:1200px)" />
+
+                                        <img src="<%=imag.fisier %> " alt="jucarii">
+
+                                    </picture>
+                                    <figcaption>
+                                        <%= imag.descriere%>
+                                    </figcaption>
+                                </figure>
+
+                                <% } %>
+                                    <% } %>
+
+
+                        </div>
+                    </section>
+                    <hr>
                     <p>
-                        <b>Magazinul nostru de jucării</b> vă întâmpină cu o varietate incredibilă de produse, perfecte
+                        <b>Magazinul nostru de jucării</b> vă întâmpină cu o varietate incredibilă de produse,
+                        perfecte
                         pentru a
-                        aduce bucurie și entuziasm în viața copiilor dvs. Avem o selecție vastă de jucării educative,
+                        aduce bucurie și entuziasm în viața copiilor dvs. Avem o selecție vastă de jucării
+                        educative,
                         puzzle-uri
                         captivante și seturi de construcție LEGO care stimulează imaginația și dezvoltă abilitățile
                         cognitive
                         ale copiilor.
-                        <abbr title="Jucarioare.com">Noi</abbr> ne străduim să oferim cele mai bune produse și servicii
+                        <abbr title="Jucarioare.com">Noi</abbr> ne străduim să oferim cele mai bune produse și
+                        servicii
                         clienților noștri, iar experiența de cumpărături este simplă și plăcută. Beneficiați de
                         transport
                         gratuit pentru comenzile de peste 50 de lei și de promoții periodice care vă permit să
@@ -37,13 +91,16 @@
                     </p>
 
                     <p>
-                        Ne mândrim cu gama noastră variată de produse de înaltă calitate, care sunt sigure și conforme
+                        Ne mândrim cu gama noastră variată de produse de înaltă calitate, care sunt sigure și
+                        conforme
                         cu
                         cele
                         mai
-                        înalte standarde. De la păpuși adorabile și mașinuțe interactive până la jocuri de construcție
+                        înalte standarde. De la păpuși adorabile și mașinuțe interactive până la jocuri de
+                        construcție
                         complexe,
-                        avem tot ce aveți nevoie pentru a transforma copilăria într-o aventură plină de distracție și
+                        avem tot ce aveți nevoie pentru a transforma copilăria într-o aventură plină de distracție
+                        și
                         învățare.
                     </p>
                     <p>
@@ -100,6 +157,7 @@
                         </figure>
                     </div>
                 </section>
+
                 <section id="Promotii">
                     <h2>Promoții</h2>
 
@@ -147,6 +205,7 @@
                             </article>
                         </div>
                     </section>
+                    <hr>
                     <section id="Pasti">
                         <h3>Vânzarea de Paști</h3>
                         <p>
@@ -157,9 +216,10 @@
                             mașinuțe interactive și multe altele. În plus, toate comenzile de peste 100 de lei
                             beneficiază
                             de transport gratuit!
+
                         </p>
                     </section>
-
+                    <hr>
                     <section id="Abonati">
                         <h3>Promoții pentru Abonați</h3>
                         <p>
@@ -170,7 +230,7 @@
                             ocazia de a fi la curent cu cele mai recente oferte!
                         </p>
                     </section>
-
+                    <hr>
                 </section>
 
 
@@ -253,6 +313,7 @@
                             </tr>
                         </tfoot>
                     </table>
+                    <hr>
                 </section>
                 <section id="utilizatori">
                     <h2>Utilizatori</h2>
@@ -270,6 +331,7 @@
                         publishing software like Aldus PageMaker including versions of Lorem Ipsum
                     </p>
                 </section>
+
                 <section id="evenimente">
                     <h2>Evenimente</h2>
                     <p>
@@ -295,6 +357,7 @@
                         publishing software like Aldus PageMaker including versions of Lorem Ipsum
                     </p>
                 </section>
+
                 <section id="anunturi">
                     <h2>Anunturi</h2>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
@@ -309,12 +372,14 @@
                         desktop
                         publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
                 </section>
+
                 <section id="utilizator_statistica">
                     <h2>Utilizator-Statistica</h2>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
                         the
                         industry's standard dummy text ever since the</p>
                 </section>
+
                 <section id="date_site">
                     <h2>Date-Site</h2>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
@@ -329,6 +394,7 @@
                         desktop
                         publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
                 </section>
+
                 <section id="intrebari_frecvente">
                     <h3>Întrebări frecvente</h3>
                     <details>

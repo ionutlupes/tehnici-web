@@ -1,0 +1,87 @@
+{
+	"cale_galerie": "resurse/imagini/galerie",
+	"imagini": [
+		{
+			"fisier": "1.jpg",
+			"descriere": "jucarie lemn",
+			"luni": [
+				"martie",
+				"februarie",
+				"noiembrie",
+				"aprilie"
+			]
+		},
+		{
+			"fisier": "2.jpg",
+			"descriere": "cutie jucarii",
+			"luni": [
+				"ianuarie",
+				"februarie",
+				"aprilie",
+				"iunie"
+			]
+		},
+		{
+			"fisier": "3.jpg",
+			"descriere": "poo suparat",
+			"luni": [
+				"ianuarie",
+				"noiembrie",
+				"iunie",
+				"martie",
+				"aprilie"
+			]
+		},
+		{
+			"fisier": "4.jpg",
+			"descriere": "leopard",
+			"luni": [
+				"noiembrie",
+				"aprilie"
+			]
+		},
+		{
+			"fisier": "5.jpg",
+			"descriere": "pinguin",
+			"luni": [
+				"aprilie"
+			]
+		},
+		{
+			"fisier": "6.jpg",
+			"descriere": "macara",
+			"luni": [
+				"septembrie",
+				"ianuarie"
+			]
+		},
+		{
+			"fisier": "7.jpg",
+			"descriere": "cub rubik",
+			"luni": [
+				"august"
+			]
+		},
+		{
+			"fisier": "8.jpg",
+			"descriere": "flurry",
+			"luni": [
+				"iulie"
+			]
+		},
+		{
+			"fisier": "9.jpg",
+			"descriere": "bebelus",
+			"luni": [
+				"aprilie"
+			]
+		},
+		{
+			"fisier": "10.jpg",
+			"descriere": "barcuta",
+			"luni": [
+				"noiembrie"
+			]
+		}
+	]
+}
